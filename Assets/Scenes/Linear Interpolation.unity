@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 35365403}
   - component: {fileID: 35365402}
+  - component: {fileID: 35365404}
   m_Layer: 0
   m_Name: start
   m_TagString: Untagged
@@ -206,6 +207,79 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &35365404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35365401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5069f81f4f221a14d8513d7352f16f84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0015907288
+      value: 0.4833374
+      inSlope: 1.8147067
+      outSlope: 1.8147067
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18471736
+      value: 0.82143193
+      inSlope: 0.30325663
+      outSlope: 0.30325663
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.38375795
+      value: 0.5809524
+      inSlope: 0.32228827
+      outSlope: 0.32228827
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.45700812
+      value: 0.7166681
+      inSlope: 0.43841198
+      outSlope: 0.43841198
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.72292984
+      value: 0.4571429
+      inSlope: -0.047785997
+      outSlope: -0.047785997
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.0636941
+      value: 0.7571429
+      inSlope: 0.880374
+      outSlope: 0.880374
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  t: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
