@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,7 +7,7 @@ public class SpriteChanger : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Color col;
-    public Sprite[] barrels = new Sprite[3];
+    public List<Sprite> barrels;
     public int randomNumber = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,9 +24,12 @@ public class SpriteChanger : MonoBehaviour
     {
         if (Keyboard.current.anyKey.wasPressedThisFrame == true)
         {
+            Debug.Log("Try to change the sprite");
             //PickARandomColor();
-            PickARandomSprite();
-
+            if (barrels.Count > 0)
+            {
+                PickARandomSprite();
+            }
         }
 
 
@@ -44,6 +49,12 @@ public class SpriteChanger : MonoBehaviour
             spriteRenderer.color = Color.white;
 
         }
+        if(Mouse.current.leftButton.wasPressedThisFrame == true && barrels.Count > 0) 
+        {
+            barrels.RemoveAt(0);
+
+        }
+            
 
     }
     void PickARandomColor()
@@ -53,10 +64,12 @@ public class SpriteChanger : MonoBehaviour
     }
     void PickARandomSprite()
     {
-        //get a random number between 0 and 2
-        randomNumber = Random.Range(0, barrels.Length);
-        //use that to set the script 
+        ////get a random number between 0 and 2
+        randomNumber = Random.Range(0, barrels.Count);
+        ////use that to set the script 
         spriteRenderer.sprite = barrels[randomNumber];
 
     }
+
+
 }
