@@ -21,6 +21,9 @@ public class SpriteChanger : MonoBehaviour
 
         //  }
 
+
+        // Not this one spriteRenderer.sprite.bounds.Contains(mousePos); sprite is at 0,0
+        // Use this: priteRenderer.bounds.Contains(mousePos) == true
         //Get the mouse position 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         //Is it over the sprite?
