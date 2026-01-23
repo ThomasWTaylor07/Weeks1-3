@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
-public class FollowMe : MonoBehaviour
+public class FollowMouse : MonoBehaviour
+  
 {
+    public float speed;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,10 +15,9 @@ public class FollowMe : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 newPos = transform.position;
+        
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-
-        //mousePos.z = 0;
         transform.position = mousePos;
+        ;
     }
 }
