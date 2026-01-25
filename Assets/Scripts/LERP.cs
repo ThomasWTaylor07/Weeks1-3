@@ -5,6 +5,7 @@ public class LERP : MonoBehaviour
     public Transform startpoint;
     public Transform endpoint;
     public float t = 0;
+    public float r;
     public AnimationCurve c;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,7 +17,7 @@ public class LERP : MonoBehaviour
     void Update()
     {
         t += Time.deltaTime;
-        if (t > 1)
+        if (t > r)
         {
             t = 0;
         }
