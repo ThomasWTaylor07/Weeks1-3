@@ -25,9 +25,12 @@ public class SquareMovement : MonoBehaviour
         //Initializes a Vector2 that checks the value of transform.position within where the camera is showing so the position can stay on screen
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
         //Checks whether the object is on the top or bottom of the screen, allowing the postion to be made when those conditions are met
-        if (screenPosition.y > Screen.height || screenPosition.y < -5)
-        //Turns the value of speed negative which reverses the position of the game object and preventing it from going off scren
+        if (screenPosition.y > Screen.height - 100 || screenPosition.y < -1)
+        {
+
+            //Turns the value of speed negative which reverses the position of the game object and preventing it from going off scren
             speed *= -1;
+        }
     }
 }
 
