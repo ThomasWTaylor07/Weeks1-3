@@ -16,11 +16,11 @@ public class SquareMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Creates a vector2 that's being assigned to the game objects position so that it is able to be changed later
+        //Initilizes and assigns a new Vector2 to the game objects position so that it can be changed later
         Vector2 newPos = transform.position;
-        //Sets the Y value of the Vector2 that will be added to the objects positon to create consistent movement as it is using delta time
+        //Adds the value of speed to the Y value of newPos so it can add that value to the objects position, allowing it to move
         newPos.y += speed * Time.deltaTime;
-        //Assigns the objects position back to the value of the newPos so it can update the objects position, allowing it to move with speed
+        //Assigns the objects position back to the value of the newPos so it can update the objects position
         transform.position = newPos;
         //Initializes a Vector2 that checks the value of transform.position within the cameras view so that the object can stay on screen
         Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);

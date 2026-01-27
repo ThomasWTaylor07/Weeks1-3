@@ -13,15 +13,15 @@ public class UFOMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Assigns a new Vector2 to the game objects position so it can be moved later in the code
+        //Assigns a new Vector2 to the UFOs position so it can be moved later in the code
         Vector2 newPos = transform.position;
-        //Adds the value of a speed variable multiplied by delta time to create consistent movement for the UFO no matter the framerate
+        //Adds the value of the speed variable multiplied by delta time, creating consistent movement for the UFO no matter the framerate
         newPos.x += speed  * Time.deltaTime;
         //Assigns the UFOs positions back to the value of newPos so that it can take its updated position and move on the screen
         transform.position = newPos;
         //Initializes a Vector2 that is equal tp the UFO's position on the screen which will be used to ensure the UFO stays on screen
         Vector2 screenPos = Camera.main.WorldToScreenPoint(transform.position);
-        //This conditional statement checks whether the UFO is off screen and change so that if it ever is, it can get back on screen
+        //This conditional statement checks whether the UFO is off screen so that if it ever is, it can get back on screen
         if (screenPos.x > Screen.width || screenPos.x < 0)
         {
             //Multiplies the speed variable by -1 to reverse the position of the UFO, preventing it from going off screen
