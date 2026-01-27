@@ -22,9 +22,10 @@ public class FollowMouse : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         //Sets the X value of the newPos vector to the X value of the mouse to move the game object
         //newPos.x = mousePos.x;
+        Vector2 screenPos = Camera.main.ScreenToWorldPoint(mousePos);
         //Sets the X value of the newPos vector to the X value of the mouse to move the game object
         //Uses a clamp to restrict the minimum and maximum value of the mouses X position so that the game object can stay on screen
-        newPos.x = Mathf.Clamp(mousePos.x, -9, 9);
+        newPos.x = Mathf.Clamp(mousePos.x, screenPos.x, screenPos.x * -1);
         //Reassigns the objects position to the value of newPos, allowing the objects position to change based on the mouses X value 
         transform.position = newPos;
     }
