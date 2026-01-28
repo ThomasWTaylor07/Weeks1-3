@@ -30,3 +30,5 @@ public class FollowMouse : MonoBehaviour
         transform.position = newPos;
     }
 }
+//All sprites in this project come from the Spriters Resource: 
+//Kirby Sprite: https://www.spriters-resource.com/nes/kirbyadv/asset/49192/ uploaded by Jermungandr

@@ -33,3 +33,6 @@ public class UFOMovement : MonoBehaviour
         }
     }
 }
+//All sprites in this project come from the Spriters Resource: 
+//UFO Sprite: https://www.spriters-resource.com/nes/kirbyadv/asset/49202/ uploaded by Jermungandr
+//Background Sprite: https://www.spriters-resource.com/nes/kirbyadv/asset/235405/ uploaded by UltraHype97

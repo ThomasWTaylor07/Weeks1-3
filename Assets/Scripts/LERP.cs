@@ -13,6 +13,8 @@ public class LERP : MonoBehaviour
     //Initializes an animation curve that can be changed within the inpspector to detrmine the speed at which an object interpelates
     public AnimationCurve c;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+   
+    
     void Start()
     {
 
@@ -33,5 +35,8 @@ public class LERP : MonoBehaviour
         transform.position = Vector2.Lerp(startpoint.position, endpoint.position, c.Evaluate(t));
     }
 }
-    
+//All sprites in this project come from the Spriters Resource: 
+//Enemy Sprites: https://www.spriters-resource.com/nes/kirbyadv/asset/49202/ uploaded by Jermungandr
+//Object Sprites: https://www.spriters-resource.com/nes/kirbyadv/asset/137212/ uploaded by LudwigVonPhoenix
+//Mario Sprites: https://www.spriters-resource.com/nes/supermariobros3/asset/4230/ uploaded by Jermungandr
 
